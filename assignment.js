@@ -1,15 +1,15 @@
-function kilometerToMeter(kilometer) {
+function kilometerToMeter(distanceInKilometer) {
     //This if used for check input is negative or not
-    if (kilometer < 0 || typeof (kilometer) != "number") {
+    if (distanceInKilometer < 0 || typeof (distanceInKilometer) != "number") {
         return 'Wrong input';
     }
     //This else is the main part of the code
     else {
-        var meter = kilometer * 1000;
-        return meter;
+        var distanceInmeter = distanceInKilometer * 1000;
+        return distanceInmeter;
     }
 }
-/*var output = kilometerToMeter(5.4);
+/*var output = kilometerToMeter(55);
 console.log(output);*/
 function budgetCalculator(watch, mobile, laptop) {
     var watchPrice = 50;
@@ -19,9 +19,9 @@ function budgetCalculator(watch, mobile, laptop) {
     if (watch < 0 || mobile < 0 || laptop < 0) {
         return 'You may be put any minus input.Please check'
     }
-    //This else if check type of the input number or not
-    else if (typeof (watch, mobile, laptop) != "number") {
-        return 'you may be put a string or miss one value'
+    //This else if check type of the input integer number or not
+    else if (typeof (watch, mobile, laptop) != "number" || watch % 1 != 0 || laptop % 1 != 0 || mobile % 1 != 0) {
+        return 'Please enter positive integer number.[If you do not want to buy any product enter quantity 0 for it.]'
     }
     //This else is the main part of the code
     else {
@@ -29,40 +29,40 @@ function budgetCalculator(watch, mobile, laptop) {
         return totalBudget;
     }
 }
-/*var myChoice = budgetCalculator(9, 0, 0);
+/*var myChoice = budgetCalculator(0, 5,3);
 console.log(myChoice);*/
-function hotelCost(spendDay) {
+function hotelCost(stayDays) {
     var baseFare = 100;
+    //if someone want to spend extra time after complete his period he must pay full fare for this day
+    var daysNumber = Math.ceil(stayDays);
     //This if check the input negative or not and also check the type of input.Type must be number
-    if (spendDay < 0 || typeof (spendDay) != "number") {
-        return 'Wrong input Dear, Try again';
+    if (stayDays < 0 || typeof (stayDays) != "number") {
+        return 'Wrong input, Try again';
     }
-    //This else if calcalate Fare if the spendDay between 1 t0 10
-    else if (spendDay <= 10) {
-        var fare = spendDay * baseFare;
-        return fare;
+    //This else if calculate Fare if the stayDays between 1 to 10
+    else if (stayDays <= 10) {
+        var fare = daysNumber * baseFare;
     }
-    //This else if calcalate Fare if the spendDay between 10 t0 20
-    else if (spendDay > 10 && spendDay <= 20) {
-        var fare = 10 * baseFare + (spendDay - 10) * (baseFare - 20);
-        return fare;
+    //This else if calculate Fare if the stayDays between 11 to 20
+    else if (stayDays <= 20) {
+        var fare = 10 * baseFare + (daysNumber - 10) * (baseFare - 20);
     }
-    //This else calcalate Fare if the spendDay exceeds 20
+    //This else calculate Fare if the stayDays more than 20
     else {
-        var fare = 10 * baseFare + (20 - 10) * (baseFare - 20) + (spendDay - 20) * (baseFare - 50);
-        return fare;
+        var fare = 10 * baseFare + (20 - 10) * (baseFare - 20) + (daysNumber - 20) * (baseFare - 50);
     }
+    return fare;
 }
-/*var Day = hotelCost(70);
+/*var Day = hotelCost(10.1);
 console.log(Day);*/
 function megaFriend(friendsName) {
     //This if used for check empty array or not
     if (friendsName.length == 0) {
-        return 'You must have a friend';
+        return 'You should have a friend';
     }
     //This else is the main part of the code
     else {
-        //initialized first array element length as a maximum length and first element as a myBigFreind
+        //initialized first array element length as a maximum length and first element as a myBigFriend
         var maximumLength = friendsName[0].length;
         var myBigFriend = friendsName[0];
         //using loop for separate elements one by one
@@ -84,3 +84,5 @@ function megaFriend(friendsName) {
 /**var freinds = ["Karim", "Rahim", "Donald Trump", "I am a Big", "No I am your Boss",1234];
 var output = megaFriend(freinds);
 console.log(output);*/
+
+
