@@ -17,11 +17,11 @@ function budgetCalculator(watch, mobile, laptop) {
     var laptopPrice = 500;
     //This if is used for check any of the input nagetive or not
     if (watch < 0 || mobile < 0 || laptop < 0) {
-        return 'You may be put any minus input.Please check'
+        return 'You may be put any minus input.Please check';
     }
     //This else if check type of the input integer number or not
     else if (typeof (watch, mobile, laptop) != "number" || watch % 1 != 0 || laptop % 1 != 0 || mobile % 1 != 0) {
-        return 'Please enter positive integer number.[If you do not want to buy any product enter quantity 0 for it.]'
+        return 'Please enter positive integer number.[If you do not want to buy any product enter quantity 0 for it.]';
     }
     //This else is the main part of the code
     else {
@@ -70,11 +70,11 @@ function megaFriend(friendsName) {
             var individualName = friendsName[i];
             //This if used for check the element string or not
             if (typeof (friendsName[i]) != "string") {
-                return 'You put a number inside your friendslist.Please check'
+                return 'You put a number inside your friendslist.Please check';
             }
             //this else if used for find maximum length of string and store maximum element ony by one  
             else if (individualName.length > maximumLength) {
-                maximumLength = individualName.length
+                maximumLength = individualName.length;
                 myBigFriend = individualName;
             }
         }
