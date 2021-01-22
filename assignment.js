@@ -1,5 +1,3 @@
-
-
 function kilometerToMeter(kilometer) {
     //This if used for check input is negative or not
     if (kilometer < 0 || typeof (kilometer) != "number") {
@@ -13,7 +11,6 @@ function kilometerToMeter(kilometer) {
 }
 /*var output = kilometerToMeter(5.4);
 console.log(output);*/
-
 function budgetCalculator(watch, mobile, laptop) {
     var watchPrice = 50;
     var mobilePrice = 100;
@@ -34,7 +31,6 @@ function budgetCalculator(watch, mobile, laptop) {
 }
 /*var myChoice = budgetCalculator(9, 0, 0);
 console.log(myChoice);*/
-
 function hotelCost(spendDay) {
     var baseFare = 100;
     //This if check the input negative or not and also check the type of input.Type must be number
@@ -59,7 +55,6 @@ function hotelCost(spendDay) {
 }
 /*var Day = hotelCost(70);
 console.log(Day);*/
-
 function megaFriend(friendsName) {
     //This if used for check empty array or not
     if (friendsName.length == 0) {
